@@ -1,0 +1,16 @@
+mqtt_client:
+  ros__parameters:
+    broker:
+      host: localhost
+      port: 1883
+    bridge:
+      ros2mqtt:
+        ros_topics: 
+          - /test/ros2mq
+        /test/ros2mq:
+          mqtt_topic: test/ros2mq
+      mqtt2ros:
+        mqtt_topics: 
+          - test/ros2mq
+        test/ros2mq:
+          ros_topic: /test/mq2ros
