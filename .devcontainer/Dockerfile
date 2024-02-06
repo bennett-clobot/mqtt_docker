@@ -31,11 +31,11 @@ RUN apt-get update && apt-get install -y python3-pip \
   && apt-get install -y libasound2 \ 
   && apt install -y libcanberra-gtk-module libcanberra-gtk3-module \
   && apt-get install -y net-tools \
-  && apt-get install software-properties-common
+  && apt-get install -y software-properties-common
 
 # install mqtt
 RUN apt-add-repository ppa:mosquitto-dev/mosquitto-ppa && apt-get update && apt-get install -y mosquitto && apt-get install -y mosquitto-clients
 # run mqtt bridge
 
 # install mqtt-bridge
-RUN apt-get install ros-$ROS_DISTRO-mqtt-client
+RUN apt-get install -y ros-$ROS_DISTRO-mqtt-client
